@@ -1,0 +1,1 @@
+<script>window.location.replace('http://ski.co.za/prices-booking')</script>

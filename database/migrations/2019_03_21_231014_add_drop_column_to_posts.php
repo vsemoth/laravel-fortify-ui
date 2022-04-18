@@ -14,7 +14,7 @@ class AddDropColumnToPosts extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->string('drop')->nullable();
+            $table->string('drop')->after('slug')->nullable();
         });
     }
 

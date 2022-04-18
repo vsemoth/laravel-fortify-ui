@@ -36,3 +36,33 @@ Route::get('{slug}', [
 ])->where(
 	'slug', '[\w\d\-\_]+'
 );
+
+Route::get('{image_slug}', [
+	'as' => 'blog.image',
+	'uses' => 'BlogController@getImage'
+])->where(
+	'image_slug', '[\w\d\-\_]+'
+);
+
+Route::get('add_to_cart/{id}', [
+	'uses' => 'ProductController@getAddToCart',
+	'as' => 'products.addToCart'
+]);
+
+Route::get('shoppingcart', [
+	'uses' => 'ProductController@getCart',
+	'as' => 'products.shoppingcart'
+]);
+
+Route::get('catalog', [
+	'uses' => 'BlogController@getSingle',
+	'as' => 'blog.catalog'
+]);
+
+Route::get('/terms/voucher', [
+	'uses' => 'BlogController@getTerms',
+	'as' => 'blog.voucher'
+]);
+
+Route::resource('/products', 'ProductController', ['except' => ['create', 'delete', 'update']]);
+

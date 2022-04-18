@@ -6,9 +6,9 @@
                         @if ($images = App\Screenshot::all())
                             @foreach ($images as $image)
                                 @if ($image->category->id == $post['category_id'] &&  App\Post::orderBy('updated_at')->first()->id == App\Screenshot::orderBy('id')->first()->id)
-                        <li data-target="#carousel-Ski_Deck-dynamic" data-slide-to="{{ $image->id }}" class="active"></li>
-                                    @elseif ($image->category->id == $post['category_id'])
-                        <li data-target="#carousel-Ski_Deck-dynamic" data-slide-to="{{ $image->id }}"></li>
+									<li data-target="#carousel-Ski_Deck-dynamic" data-slide-to="{{ $image->id }}" class="active"></li>
+								@elseif ($image->category->id == $post['category_id'])
+									<li data-target="#carousel-Ski_Deck-dynamic" data-slide-to="{{ $image->id }}"></li>
                                 @endif
                             @endforeach
 

@@ -8,7 +8,7 @@
         </div>
         <div style="float: left;" class="collapse navbar-collapse" id="ariaSkiNav">
                 <ul class="navbar-nav mr-auto nav link">
-                @if($posts = App\Post::all())
+                @if($posts = App\Models\Post::all())
                     @foreach($posts as $post)
                             @if($post->id == 3)
                         <li class="dropdown nav-pill">

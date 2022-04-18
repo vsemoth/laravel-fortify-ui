@@ -48,6 +48,8 @@ class UserController extends Controller
         // Validate Store Request
         $this->validate($request, [
             'name' => 'required|max:255',
+            'last_name' => 'required|max:255',
+            'user_name' => 'required|max:255',
             'email' => 'required|email|unique:users'
         ]);
 
@@ -70,6 +72,10 @@ class UserController extends Controller
         $user = new User;
 
         $user->name = $request->input('name');
+
+        $user->name = $request->input('last_name');
+
+        $user->name = $request->input('user_name');
 
         $user->name = $request->input('email');
 
