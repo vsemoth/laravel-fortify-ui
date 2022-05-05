@@ -29,10 +29,8 @@ class PostsController extends Controller
      */
     public function create()
     {
-        // Fetch select id from DB (Categories)
-        $categories = Category::all();
         // Return Create Page with select data
-        return view('manage.posts.create')->with('categories', $categories);
+        return view('manage.posts.create');
     }
 
     /**

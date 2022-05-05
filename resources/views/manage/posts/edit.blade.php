@@ -10,7 +10,7 @@
         <div class="col-md-12">
                 <h2>Edit Post</h2>
                 <hr>
-                {!! Form::open(['action' => ['App\Http\Controllers\PostsController@update', $post->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+                {!! Form::open(['action' => ['App\Http\Controllers\PostsController@update', $post->id], 'method' => 'POST', 'enctype' => 'multipart/form-data', 'id' => 'myeditorinstance']) !!}
                   <div class = "dropdown row">
                           <select name="drop" class="mdb-select md-form colorful-select dropdown-primary">
                            @foreach ($posts as $post1)
